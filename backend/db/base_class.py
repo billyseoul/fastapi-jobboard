@@ -11,5 +11,6 @@ class Base:
 
     metadata: MetaData
 
-    def __tablename__(self, cls)->str:
+    @declared_attr
+    def __tablename__(cls)->str:
         return cls.__name__.lower()
